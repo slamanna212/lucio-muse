@@ -32,6 +32,6 @@ export default class implements Command {
     }
 
     player.stop();
-    await interaction.reply('u betcha, stopped');
+    await interaction.reply('Why\'s the music stopped?');
   }
 }

@@ -160,7 +160,7 @@ export default class AddQueryToQueue {
       await player.play();
 
       if (wasPlayingSong) {
-        statusMsg = 'resuming playback';
+        statusMsg = 'Back in the mix!';
       }
 
       await interaction.editReply({
@@ -193,9 +193,9 @@ export default class AddQueryToQueue {
     }
 
     if (newSongs.length === 1) {
-      await interaction.editReply(`u betcha, **${firstSong.title}** added to the${addToFrontOfQueue ? ' front of the' : ''} queue${skipCurrentTrack ? 'and current track skipped' : ''}${extraMsg}`);
+      await interaction.editReply(`Loud and clear, **${firstSong.title}** added to the${addToFrontOfQueue ? ' front of the' : ''} queue${skipCurrentTrack ? 'and current track skipped' : ''}${extraMsg}`);
     } else {
-      await interaction.editReply(`u betcha, **${firstSong.title}** and ${newSongs.length - 1} other songs were added to the queue${skipCurrentTrack ? 'and current track skipped' : ''}${extraMsg}`);
+      await interaction.editReply(`You bet, **${firstSong.title}** and ${newSongs.length - 1} other songs were added to the queue${skipCurrentTrack ? 'and current track skipped' : ''}${extraMsg}`);
     }
   }
 
